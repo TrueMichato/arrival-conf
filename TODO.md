@@ -1,8 +1,12 @@
 # Todo List
 
 ## UI
+### Site
+[V] Change Site Icon
+[V] Change Site Title
+
 ### Homepage
-2 [ ] Change Picture in Homepage    
+2 [V] Change Picture in Homepage    
 [ ] Change Writing     
 [ ] Change Goole Maps link    
 [ ] Add link to Bit/Paybox at the top  
