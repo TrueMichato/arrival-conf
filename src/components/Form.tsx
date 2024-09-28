@@ -44,9 +44,9 @@ export default function Form() {
   };
 
   const onSubmit = async (data: any) => {
-    const error = await createGuest(data);
-    if (error) {
-      setError("root", error);
+    const error = await createGuest(data); // TODO - create option for update, not an error
+    if (error) {  
+      setError("root", { message: error });
       alert("ניתן לאשר הגעה פעם אחת בלבד, מייל זה כבר מופיע במערכת");
     } else {
       reset();
@@ -74,13 +74,13 @@ export default function Form() {
                   message: "שם פרטי קצר מדי, אנא הזן לפחות 2 תווים",
                 },
                 maxLength: {
-                  value: 15,
+                  value: 15, // TODO - change to 30
                   message: "שם פרטי ארוך מדי, אנא הזן עד 15 תווים",
                 },
                 pattern: {
-                  value: /^[א-ת\s]+$/i,
+                  value: /^[א-ת\s]+$/i, // TODO - add english letters
                   message:
-                    "שם פרטי מכיל תווים שאינם אותיות בעברית, אנא נסה שוב",
+                    "שם פרטי מכיל תווים שאינם אותיות בעברית, אנא נסה שוב", // TODO - add english letters
                 },
               })}
               aria-invalid={errors.first_name ? "true" : "false"}
@@ -102,13 +102,13 @@ export default function Form() {
                   message: "שם משפחה קצר מדי, אנא הזן לפחות 2 תווים",
                 },
                 maxLength: {
-                  value: 15,
+                  value: 15, // TODO - change to 30
                   message: "שם משפחה ארוך מדי, אנא הזן עד 15 תווים",
                 },
                 pattern: {
-                  value: /^[א-ת\s]+$/i,
+                  value: /^[א-ת\s]+$/i, // TODO - add english letters
                   message:
-                    "שם משפחה מכיל תווים שאינם אותיות בעברית, אנא נסה שוב",
+                    "שם משפחה מכיל תווים שאינם אותיות בעברית, אנא נסה שוב", // TODO - add english letters
                 },
               })}
               aria-invalid={errors.last_name ? "true" : "false"}
@@ -126,7 +126,7 @@ export default function Form() {
               {...register("phone", {
                 required: "מספר טלפון הינו חובה",
                 pattern: {
-                  value: /^(05\d{8}|0\d{9})$/,
+                  value: /^(05\d{8}|0\d{9})$/, // TODO - change to (?:([+]\d{1,4})[-.\s]?)?(?:[(](\d{1,3})[)][-.\s]?)?(\d{1,4})[-.\s]?(\d{1,4})[-.\s]?(\d{1,9})
                   message: "אנא הזן מספר תקין",
                 },
               })}
@@ -136,18 +136,18 @@ export default function Form() {
           </div>
           <ErrorBar error={errors.phone} />
         </div>
-
-        <label>
+              /* TODO - Change text to mark number of people coming */
+        <label> 
           <div className="text-lg mt-6">
             <span>הוסף את שמות בני המשפחה שבאים</span>
           </div>
 
           <div className=" mb-2 text-sm">
             <p className="text-sm">* אנא וודא שכל אדם נרשם פעם אחת בלבד</p>
-            <p>* אין צורך לרשום ילדים מגיל שש ומטה</p>
+            <p>* אין צורך לרשום ילדים מגיל שש ומטה</p> // TODO - change to 3
           </div>
 
-          <div className="flex items-end gap-2 mb-4">
+          <div className="flex items-end gap-2 mb-4"> // TODO - change to number of people coming
             <div className="flex flex-col gap-1">
               {fields.map((field, index) => (
                 <div key={field.id}>
@@ -193,7 +193,7 @@ export default function Form() {
           </div>
         </label>
 
-        <div className="mb-4">
+        <div className="mb-4"> 
           <div className="form-control">
             <label className="label cursor-pointer flex justify-start">
               <input
@@ -229,7 +229,7 @@ export default function Form() {
             </span>
           </div>
         )}
-
+        // TODO - Remove this section
         <div className="text-lg">
           <p>בקשת מנה מיוחדת</p>
         </div>

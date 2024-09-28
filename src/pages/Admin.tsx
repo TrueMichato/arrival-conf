@@ -12,3 +12,4 @@ export default function Admin() {
     </>
   );
 }
+// TODO - create access to the DB and check if the user is an admin

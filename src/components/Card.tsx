@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 
 import MapPin from "../icons/map-pin";
-
+// TODO - change text of homepage (app.tsx)
 export default function Card() {
   return (
     <div className="text-center pb-8">

@@ -1,6 +1,6 @@
 export default function Confirm() {
   return (
-    <>
+    <> // TODO - change text, add links
       <div
         className="bg-cover min-h-screen flex justify-center items-center"
         style={{ backgroundImage: `url('./background.png')` }}

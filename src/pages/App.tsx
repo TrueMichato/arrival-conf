@@ -32,7 +32,7 @@ function App() {
       >
         <div className="max-w-sm bg-white/60">
           <figure>
-            <img src="YH.png" alt="Yosi and Chaya" />
+            <img src="RinaTomer2.png" alt="Rinat and Tomer" />
           </figure>
           <div className="card bg-white/50 rounded-none">
             <div className="card-dody px-16 pb-16">
